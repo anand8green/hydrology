@@ -1,0 +1,78 @@
+@import "../guide";
+//     #{$Blue}
+//     #{$DarkBlue}
+//     #{$Black}
+//     #{$Green}
+
+//     $thin
+//     $mid
+//     $fat
+
+.NavBar {
+  &__Content {
+    @include centerMe;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+
+    .logo {
+      cursor: pointer;
+    }
+
+    > ul {
+      display: flex;
+      font-size: 0.9rem;
+
+      li {
+        margin-right: 1.5rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        padding: 0.8rem 0.3rem;
+
+        &:hover {
+          color: rgb(85, 232, 255);
+        }
+      }
+    }
+
+    > button {
+      border: none;
+      padding: 0.6rem 2rem;
+      font-size: 0.8rem;
+      font-family: $mid;
+      outline: none;
+      border-radius: 0.6rem;
+      background-color: rgba(255, 255, 255, 0.192);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.397);
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+        background-color: rgba(21, 111, 156, 0.192);
+      }
+    }
+    .icon {
+      display: none;
+      background-color: rgba(255, 255, 255, 0.192);
+      font-size: 3.5rem;
+      padding: 12px;
+      border-radius: 0.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.397);
+    }
+
+    @media (max-width: 800px) {
+      ul {
+        display: none;
+      }
+      button {
+        display: none;
+      }
+      .icon {
+        display: block;
+      }
+    }
+  }
+}

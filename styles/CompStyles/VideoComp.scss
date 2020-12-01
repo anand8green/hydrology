@@ -1,0 +1,42 @@
+@import "../guide";
+//     #{$Blue}
+//     #{$DarkBlue}
+//     #{$Black}
+//     #{$Green}
+
+//     $thin
+//     $mid
+//     $fat
+
+.VideoComp {
+  position: relative;
+  z-index: 10;
+  background-color: #{$Black};
+  font-family: $mid;
+
+  .VideoContent {
+    @include centerMe;
+    text-align: center;
+    color: #{$White};
+    h1 {
+      font-size: 3rem;
+    }
+
+    span {
+      color: #{$Blue};
+    }
+    p {
+      font-family: $thin;
+      margin-top: 1rem;
+      margin-bottom: 4rem;
+    }
+    .VideoBox {
+      margin: 0rem auto;
+      height: 400px;
+      background-color: rgba(0, 0, 0, 0.315);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

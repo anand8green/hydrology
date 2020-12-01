@@ -1,0 +1,88 @@
+@import "../guide";
+//     #{$Blue}
+//     #{$DarkBlue}
+//     #{$Black}
+//     #{$Green}
+
+//     $thin
+//     $mid
+//     $fat
+
+.Contact {
+  padding: 5rem 0;
+  background-color: #{$Blue};
+
+  &__Content {
+    margin: 0 auto;
+    @include centerMe;
+    text-align: center;
+    color: #{$White};
+    font-family: $thin;
+
+    .title {
+      margin: 1rem 0 3rem 0;
+      h1 {
+        font-size: 3rem;
+      }
+      p {
+        font-size: 1.2rem;
+        margin: 1rem;
+      }
+    }
+
+    .form {
+      background-color: rgb(255, 255, 255);
+      width: 25rem;
+      margin: 0 auto;
+      text-align: center;
+      padding: 2rem;
+      border-radius: 1rem;
+
+      input {
+        display: block;
+        width: 100%;
+        padding: 0.5rem;
+        font-size: 1rem;
+        border: 1px solid rgb(222, 222, 222);
+        background-color: rgb(241, 241, 241);
+        margin-bottom: 1rem;
+        color: rgb(96, 96, 96);
+        transition: all 0.3s ease;
+        outline: none;
+        font-family: $thin;
+
+        &:hover {
+          background-color: rgb(255, 255, 255);
+        }
+      }
+      label {
+        display: block;
+        text-align: left;
+        color: rgb(0, 0, 0);
+        font-size: 0.8rem;
+        margin-bottom: 0.2rem;
+      }
+      button {
+        margin-top: 1.3rem;
+        text-align: center;
+        @include bigButton;
+        width: 100%;
+        background-color: #{$Green};
+        color: white;
+        border-radius: 0.8rem;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: #689c41;
+        }
+      }
+      p {
+        padding: 0;
+        font-family: $thin;
+        font-size: 0.7rem;
+        color: rgb(93, 93, 93);
+        margin-top: 1rem;
+      }
+    }
+  }
+}

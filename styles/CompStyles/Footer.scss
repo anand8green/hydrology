@@ -1,0 +1,79 @@
+@import "../guide";
+//     #{$Blue}
+//     #{$DarkBlue}
+//     #{$Black}
+//     #{$Green}
+
+//     $thin
+//     $mid
+//     $fat
+
+.Footer {
+  background-color: #{$Black};
+  color: #{$White};
+
+  &__Content {
+    @include centerMe;
+    text-align: center;
+
+    > h1 {
+      font-family: $mid;
+      font-size: 2.5rem;
+      padding-top: 3rem;
+    }
+    > p {
+      margin: 1rem 0 3rem 0;
+      font-family: $thin;
+      font-size: 1.3rem;
+    }
+    button {
+      @include bigButton;
+      margin: 0 0.5rem;
+      border-radius: 0.8rem;
+      color: white;
+    }
+    .QuoteBtn {
+      background-color: #{$Blue};
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: #248fa1;
+      }
+    }
+    .callBtn {
+      background: #333746;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: #272b36;
+      }
+    }
+
+    .linksBox {
+      margin: 6rem;
+      display: flex;
+      justify-content: space-evenly;
+
+      .links {
+        > h3 {
+          color: #53555a;
+        }
+        > p {
+          font-family: $thin;
+          margin: 0.5rem 0;
+          cursor: pointer;
+          transition: 0.2s ease;
+
+          &:hover {
+            color: #{$Blue};
+          }
+        }
+      }
+    }
+
+    .iconTag {
+      padding-bottom: 5rem;
+      font-size: 0.8rem;
+    }
+  }
+}

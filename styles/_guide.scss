@@ -1,0 +1,71 @@
+// BRAND COLOR VARIABLES
+
+$Blue: "#30BAD2";
+$DarkBlue: "#337DAF";
+$Green: "#79B54C";
+$Black: "#252832";
+$White: "#FFFFFF";
+
+// BRAND FONT VARIABLES
+
+$thin: "Gotham-thin";
+$mid: "Gotham-mid";
+$fat: "Gotham-fat";
+
+button {
+  cursor: pointer;
+}
+
+@mixin centerMe {
+  max-width: 55rem;
+  margin: 0 auto;
+}
+
+@mixin bigButton {
+  border: none;
+  padding: 1.2rem 2rem;
+  font-size: 1rem;
+  font-family: $mid;
+  outline: none;
+  box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.158);
+}
+
+@font-face {
+  font-family: "Gotham-thin";
+  src: url("./font/GR-Light.otf") format("embedded-opentype");
+  src: url("./font//GothamRoundedLight_21020.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Gotham-mid";
+  src: url("./font/GR-Book.otf") format("embedded-opentype");
+  src: url("./font/GothamRoundedBook_21018.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Gotham-fat";
+  src: url("./font/GR-Medium.otf") format("embedded-opentype");
+  src: url("./font/GothamRoundedMedium_21022.ttf") format("truetype");
+}
+
+::placeholder {
+  color: rgb(206, 206, 206);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: rgb(206, 206, 206);
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: rgb(206, 206, 206);
+}
+
+ul {
+  list-style: none;
+  text-decoration: none;
+}
+
+input {
+  border: none;
+}

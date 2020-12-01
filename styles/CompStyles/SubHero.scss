@@ -1,0 +1,84 @@
+@import "../guide";
+//     #{$Blue}
+//     #{$DarkBlue}
+//     #{$Black}
+//     #{$Green}
+//     #{$White};
+
+//     $thin
+//     $mid
+//     $fat
+
+.SubHero {
+  position: relative;
+  z-index: 10;
+  background-color: #{$Black};
+  color: #{$White};
+  // border-radius: 90%/100px 100px 0 0;
+  clip-path: ellipse(150% 100% at 50% 0);
+  -webkit-clip-path: ellipse(150% 100% at 50% 100%);
+  margin-top: -5rem;
+
+  &__Content {
+    @include centerMe;
+    padding: 2rem;
+
+    > h1 {
+      font-size: 3rem;
+      font-family: $mid;
+      padding-top: 5rem;
+    }
+
+    > p {
+      font-family: $thin;
+      font-size: 1.2rem;
+      margin: 3rem 0;
+      line-height: 2rem;
+      max-width: 40rem;
+    }
+
+    .SubHero__cms {
+      display: flex;
+      flex-wrap: wrap;
+      font-family: $thin;
+      padding-bottom: 10rem;
+
+      .SubHero__cms__tab {
+        width: 12rem;
+        display: flex;
+        margin: 0rem 4rem 3rem 0;
+
+        // justify-content: space-between;
+        .icon {
+          background-color: #343747;
+          width: 4rem;
+          height: 4rem;
+          border-radius: 0.7rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 1rem;
+          font-size: 3rem;
+          color: #{$Green};
+
+          > img {
+            width: 1.5rem;
+            object-fit: cover;
+          }
+        }
+        .info {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          .title {
+            display: block;
+            color: #{$White};
+          }
+          .subTitle {
+            color: #{$Green};
+          }
+        }
+      }
+    }
+  }
+}

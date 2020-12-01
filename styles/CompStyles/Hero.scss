@@ -1,0 +1,103 @@
+@import "../guide";
+//     #{$Blue}
+//     #{$DarkBlue}
+//     #{$Black}
+//     #{$Green}
+
+//     $thin
+//     $mid
+//     $fat
+
+.BubbleNew {
+  width: 100%;
+  height: 800px;
+  position: absolute;
+  top: 1000px;
+  z-index: 1;
+  opacity: 0.3;
+}
+
+.BubbleNewTwo {
+  width: 100%;
+  height: 800px;
+  position: absolute;
+  top: 1000px;
+  z-index: 2;
+  opacity: 0.3;
+  // background-color: rgb(13, 60, 104);
+}
+
+.Hero {
+  text-align: center;
+  min-height: 50rem;
+  color: white;
+  font-size: 2rem;
+  font-family: $thin;
+  background-color: #{$Blue};
+
+  .BubbleBg {
+    // background-color: #{$Blue};
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    pointer-events: none;
+  }
+
+  &__Content {
+    @include centerMe;
+    position: relative;
+    z-index: 10;
+
+    .Hero__Text {
+      margin-top: 2rem;
+
+      > h1 {
+        padding: 1rem;
+      }
+
+      > p {
+        font-size: 1.3rem;
+        padding: 1rem;
+      }
+    }
+    .Hero__Form {
+      > input {
+        width: 300px;
+        margin: 2rem 0;
+        @include bigButton;
+        color: rgb(132, 132, 132);
+        border-top-left-radius: 0.8rem;
+        border-bottom-left-radius: 0.8rem;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: rgb(219, 219, 219);
+        }
+      }
+      > button {
+        @include bigButton;
+        color: white;
+        border-top-right-radius: 0.8rem;
+        border-bottom-right-radius: 0.8rem;
+        background: #{$Green};
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: #689c41;
+        }
+      }
+    }
+  }
+
+  .bigButton {
+    border: none;
+    padding: 1.2rem 2rem;
+    font-size: 1rem;
+    font-family: $mid;
+    outline: none;
+    box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.158);
+  }
+}

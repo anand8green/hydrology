@@ -1,0 +1,84 @@
+@import "../guide";
+//     #{$Blue}
+//     #{$DarkBlue}
+//     #{$Black}
+//     #{$Green}
+
+//     $thin
+//     $mid
+//     $fat
+
+.News {
+  background-color: #{$Black};
+  font-family: $mid;
+  padding: 10rem 0;
+
+  &__Content {
+    @include centerMe;
+    font-family: $mid;
+    color: #{$White};
+
+    .Title {
+      padding: 0 2rem;
+
+      h1 {
+        font-size: 3rem;
+      }
+
+      p {
+        font-family: $thin;
+        margin: 1rem 0 4rem 0;
+      }
+    }
+
+    .NewsBox {
+      display: flex;
+      flex-wrap: wrap;
+      padding-left: 1rem;
+    }
+  }
+}
+
+// News component
+
+.NewsItem {
+  margin: 1rem;
+  background-color: #333746;
+  width: 16rem;
+  height: 18rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 2px 15px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .pic {
+    height: 11rem;
+    background-color: #{$Green};
+    object-fit: cover;
+    width: 100%;
+  }
+  .info {
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+
+    &__industry {
+      font-family: $thin;
+      color: #{$Blue};
+      font-size: 0.9rem;
+    }
+    &__title {
+      color: #{$White};
+      font-family: $mid;
+      margin: 0.3rem 0;
+    }
+    &__date {
+      font-family: $thin;
+      font-size: 0.8rem;
+      color: rgb(150, 150, 150);
+    }
+  }
+}
