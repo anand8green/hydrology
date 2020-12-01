@@ -10,7 +10,7 @@
 
 .NavBar {
   position: relative;
-  z-index: 100;
+  z-index: 101;
   &__Content {
     @include centerMe;
     display: flex;
