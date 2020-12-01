@@ -5,18 +5,13 @@ import React from 'react'
 export default function BubbleNew() {
     return (
         <div>
-
             <div className="bubbleStatic"></div>
 
             <motion.div className="BubbleNew"
-
                 style={{
-
                     backgroundImage: "url(/bub5.svg)",
                     backgroundRepeat: 'no-repeat',
-                    backgroundSize: 'auto'
-                    // background-repeat: no-repeat;
-                    // background-size: auto;
+                    backgroundSize: 'contain'
 
                 }}
 
@@ -38,7 +33,12 @@ export default function BubbleNew() {
 
             <motion.div className="BubbleNewTwo"
 
-                style={{ backgroundImage: "url(/bub6.svg)" }}
+                style={{
+                    backgroundImage: "url(/bub6.svg)",
+                    backgroundRepeat: 'no-repeat',
+                    backgroundSize: 'contain'
+
+                }}
 
                 initial={{
                     y: 0

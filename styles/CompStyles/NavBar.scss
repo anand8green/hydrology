@@ -9,6 +9,8 @@
 //     $fat
 
 .NavBar {
+  position: relative;
+  z-index: 100;
   &__Content {
     @include centerMe;
     display: flex;
