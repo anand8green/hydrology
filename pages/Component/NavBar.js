@@ -1,4 +1,4 @@
-import Image from 'next/image'
+// import Image from 'next/image'
 import MenuRoundedIcon from '@material-ui/icons/MenuRounded';
 import Link from 'next/link'
 export default function NavBar() {
@@ -7,7 +7,7 @@ export default function NavBar() {
 
             <div className="NavBar__Content">
 
-                <Image
+                <img
                     src="/logo.svg"
                     alt="Hydrology logo"
                     width={120}
