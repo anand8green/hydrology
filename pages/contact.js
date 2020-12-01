@@ -19,9 +19,10 @@ export default function contact() {
         <div>
             <h1>Hello Contact page</h1>
             {
-                contacts.map(person => (
-                    <li key={person.email}>{person.name}</li>
-                ))
+                contacts ?
+                    contacts.map(person => (
+                        <li key={person.email}>{person.name}</li>
+                    )) : null
             }
         </div>
     )
