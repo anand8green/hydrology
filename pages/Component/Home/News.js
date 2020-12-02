@@ -19,7 +19,6 @@ export default function News(props) {
                                 const sentence = item.title.length > 45 ?
 
                                     item.title.substring(0, 45) + "..." :
-
                                     item.title
 
                                 let category = item.categories[0] !== undefined ? item.categories[0].name : "Industry";

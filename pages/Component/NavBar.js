@@ -12,7 +12,7 @@ export default function NavBar() {
                     alt="Hydrology logo"
                     width={120}
                     height={100}
-                    class="logo"
+                    className="logo"
                 />
 
                 <ul>

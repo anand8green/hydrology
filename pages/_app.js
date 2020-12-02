@@ -7,6 +7,7 @@ import '../styles/CompStyles/Hero.scss'
 import '../styles/CompStyles/News.scss'
 import '../styles/CompStyles/SubHero.scss'
 import '../styles/CompStyles/VideoComp.scss'
+import '../styles/CompStyles/NewsDetails.scss'
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />

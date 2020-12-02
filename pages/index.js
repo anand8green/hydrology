@@ -24,8 +24,6 @@ export default function index({
   footer_subtitle
 }) {
 
-
-
   return (
     <div className="Home" >
 
@@ -51,7 +49,7 @@ export const getStaticProps = async () => {
   const butter = Butter(process.env.BUTTER_CMS)
 
   const home = await butter.page.retrieve("*", "home")
-  const news = await butter.post.list({ page_size: 5 })
+  const news = await butter.post.list({ page_size: 6 })
 
   return {
     props: {

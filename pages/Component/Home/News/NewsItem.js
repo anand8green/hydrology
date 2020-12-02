@@ -5,14 +5,14 @@ export default function NewsItem({ category, title, date, image, index, slug }) 
         <a href={`news/${slug}`} key={index} >
             <div className="NewsItem"
                 key={index}
-                style={{ width: index === 0 ? '34rem' : "16" }}
+            // style={{ minWidth: index === 0 ? '100%' : "16" }}
             >
                 <img className="pic" src={image}>
                 </img>
 
                 <div className="info">
                     <p className="info__industry">{category}</p>
-                    <h3 className="info__title">Test{title}</h3>
+                    <h3 className="info__title">{title}</h3>
                     <p className="info__date">{date}</p>
                 </div>
 

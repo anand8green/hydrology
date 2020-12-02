@@ -4,8 +4,8 @@ export default function Footer({ footer_title, footer_subtitle }) {
     return (
         <div className="Footer">
             <div className="Footer__Content">
-                <h1>{footer_title}</h1>
-                <p>{footer_subtitle}</p>
+                <h1 className="title">{footer_title}</h1>
+                <p className="subTitle">{footer_subtitle}</p>
                 <div className="buttons">
                     <button className="QuoteBtn">Get a Quote</button>
                     <button className="callBtn">Call Us</button>
@@ -31,6 +31,9 @@ export default function Footer({ footer_title, footer_subtitle }) {
                         <p>Sign In</p>
                     </div>
 
+                </div>
+                <div>
+                    <img src="/logo_buble.svg" width='35' />
                 </div>
 
                 <p className="iconTag">Hydrology Limited 2020 - All Rights Reserved</p>

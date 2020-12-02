@@ -1,6 +1,6 @@
 import Butter from 'buttercms'
 import NavBar from '../Component/NavBar';
-import BubbleBg from '../Component/Home/BubbleBg';
+import Footer from '../Component/Home/Footer'
 
 export default function Post({ data }) {
 
@@ -10,21 +10,40 @@ export default function Post({ data }) {
 
     return (
 
-        <div className="Hero">
-
-            {/* <NavBar />
-            <img src={data.featured_image} />
-            <div className="Hero__Content">
-                <div className="Hero__Text">
-                    <h1>{data.title}</h1>
+        <div className="NewsDetails">
+            <div className="topBar">
+                <NavBar />
+            </div>
+            <div className="picBar">
+                <div className="pic">
+                    <img src={data.featured_image} />
                 </div>
             </div>
+            <div className="content">
+                <div className="text">
+                    <h1>{data.title}</h1>
+                    <div dangerouslySetInnerHTML={createMarkup()}
+                        className="info"
+                    />
+                </div>
 
-            <div dangerouslySetInnerHTML={createMarkup()} />
-
-            <BubbleBg /> */}
+            </div>
+            <div className="bottom">
+                <Footer />
+            </div>
 
         </div>
+
+        // <div className="Hero">
+        //     <NavBar />
+        //     <img src={data.featured_image} />
+        //     <div className="Hero__Content">
+        //         <div className="Hero__Text">
+        //             <h1>{data.title}</h1>
+        //         </div>
+        //     </div>
+        //     <div dangerouslySetInnerHTML={createMarkup()} />
+        // </div>
     )
 }
 

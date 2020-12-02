@@ -12,16 +12,34 @@
   background-color: #{$Black};
   color: #{$White};
 
+  position: relative;
+  z-index: 10;
+  background-color: #{$Black};
+  color: #{$White};
+  // border-radius: 90%/100px 100px 0 0;
+  clip-path: ellipse(150% 100% at 50% 0);
+  -webkit-clip-path: ellipse(150% 100% at 50% 100%);
+  margin-top: -10rem;
+
+  @media screen and (max-width: $medium) {
+    clip-path: ellipse(200% 100% at 50% 0);
+    -webkit-clip-path: ellipse(200% 100% at 50% 100%);
+  }
+  @media screen and (min-width: 675px) {
+    margin-top: -8rem;
+  }
+
   &__Content {
     @include centerMe;
     text-align: center;
+    padding-top: 5rem;
 
-    > h1 {
+    .title {
       font-family: $mid;
       font-size: 2.5rem;
       padding-top: 3rem;
     }
-    > p {
+    .subTitle {
       margin: 1rem 0 3rem 0;
       font-family: $thin;
       font-size: 1.3rem;
@@ -57,10 +75,11 @@
       .links {
         > h3 {
           color: #53555a;
+          margin-bottom: 1.4rem;
         }
         > p {
           font-family: $thin;
-          margin: 0.5rem 0;
+          margin: 1rem 0;
           cursor: pointer;
           transition: 0.2s ease;
 
@@ -72,6 +91,8 @@
     }
 
     .iconTag {
+      font-family: $thin;
+      padding-top: 1rem;
       padding-bottom: 5rem;
       font-size: 0.8rem;
     }

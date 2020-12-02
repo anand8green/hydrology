@@ -11,6 +11,9 @@
 .NavBar {
   position: relative;
   z-index: 101;
+  font-family: $thin;
+  color: #{$White};
+
   &__Content {
     @include centerMe;
     display: flex;

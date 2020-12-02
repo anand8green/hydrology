@@ -8,18 +8,8 @@
 //     $thin
 //     $mid
 //     $fat
-$small: 500px;
-$medium: 900px;
-
-.smth {
-  //some CSS
-  @media screen and (max-width: $small) {
-    //do Smth
-  }
-  @media screen and (min-width: $medium) {
-    //do Smth
-  }
-}
+// $small: 500px;
+// $medium: 900px;
 
 .SubHero {
   position: relative;
@@ -35,7 +25,6 @@ $medium: 900px;
     clip-path: ellipse(200% 100% at 50% 0);
     -webkit-clip-path: ellipse(200% 100% at 50% 100%);
   }
-
   @media screen and (min-width: 675px) {
     margin-top: -15rem;
   }

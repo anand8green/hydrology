@@ -72,8 +72,9 @@
         border-bottom-left-radius: 0.8rem;
         transition: all 0.3s ease;
 
-        &:hover {
-          background-color: rgb(219, 219, 219);
+        &:hover,
+        &:focus {
+          background-color: rgb(222, 227, 230);
         }
       }
       > button {
