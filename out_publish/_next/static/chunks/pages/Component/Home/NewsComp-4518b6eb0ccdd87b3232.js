@@ -1,0 +1,1 @@
+_N_E=(window.webpackJsonp_N_E=window.webpackJsonp_N_E||[]).push([[19],{Eqa0:function(n,o,e){(window.__NEXT_P=window.__NEXT_P||[]).push(["/Component/Home/NewsComp",function(){return e("pb5A")}])},Qetd:function(n,o,e){"use strict";var t=Object.assign.bind(Object);n.exports=t,n.exports.default=n.exports}},[["Eqa0",0,1,6]]]);

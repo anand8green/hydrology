@@ -9,7 +9,8 @@
 //     $fat
 
 .Footer {
-  color: #{$White};
+  color: #{$White} !important;
+  background-color: #{$Black};
   position: relative;
   z-index: 10;
   color: #{$White};
@@ -35,11 +36,13 @@
       font-family: $mid;
       font-size: 2.5rem;
       padding-top: 3rem;
+      color: $White !important;
     }
     .subTitle {
       margin: 1rem 0 3rem 0;
       font-family: $thin;
       font-size: 1.3rem;
+      color: $LightGray !important;
     }
     button {
       @include bigButton;
@@ -71,14 +74,16 @@
 
       .links {
         > h3 {
-          color: #53555a;
+          color: $DarkGray !important;
           margin-bottom: 1.4rem;
+          font-family: $fat;
         }
         > p {
           font-family: $thin;
           margin: 1rem 0;
           cursor: pointer;
           transition: 0.2s ease;
+          color: $White !important;
 
           &:hover {
             color: #{$Blue};

@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 export default function Footer({ footer_title, footer_subtitle }) {
@@ -10,18 +11,29 @@ export default function Footer({ footer_title, footer_subtitle }) {
                     <button className="QuoteBtn">Get a Quote</button>
                     <button className="callBtn">Call Us</button>
                 </div>
+
                 <div className="linksBox">
 
                     <div className="links">
                         <h3>Website</h3>
-                        <p>Home</p>
-                        <p>About</p>
-                        <p>News</p>
+                        <p> <Link href="/">
+                            Home
+                        </Link></p>
+                        <p><Link href="/about">
+                            About
+                        </Link></p>
+                        <p> <Link href="/news">
+                            News
+                        </Link></p>
                     </div>
                     <div className="links">
                         <h3>FAQs</h3>
-                        <p>Contact</p>
-                        <p>Benefits</p>
+                        <p> <Link href="/contact">
+                            Contact
+                        </Link></p>
+                        <p> <Link href="/benefits">
+                            Benefits
+                        </Link></p>
                         <p>News</p>
                     </div>
                     <div className="links">

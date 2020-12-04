@@ -6,15 +6,15 @@ export default function NavBar() {
         <div className="NavBar">
 
             <div className="NavBar__Content">
-
-                <img
-                    src="/logo.svg"
-                    alt="Hydrology logo"
-                    width={120}
-                    height={100}
-                    className="logo"
-                />
-
+                <Link href="/">
+                    <img
+                        src="/logo.svg"
+                        alt="Hydrology logo"
+                        width={120}
+                        height={100}
+                        className="logo"
+                    />
+                </Link>
                 <ul>
                     <li>
                         <Link href="/">

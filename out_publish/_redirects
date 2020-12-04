@@ -1,0 +1,24 @@
+# Next-on-Netlify Redirects
+/  /.netlify/functions/next_index  200!  Cookie=__prerender_bypass,__next_preview_data
+/_next/data/jmn3DeTnl0Q8Q4orvl2Ig/about.json  /.netlify/functions/next_about  200!  Cookie=__prerender_bypass,__next_preview_data
+/_next/data/jmn3DeTnl0Q8Q4orvl2Ig/benefits.json  /.netlify/functions/next_benefits  200!  Cookie=__prerender_bypass,__next_preview_data
+/_next/data/jmn3DeTnl0Q8Q4orvl2Ig/contact.json  /.netlify/functions/next_contact  200!  Cookie=__prerender_bypass,__next_preview_data
+/_next/data/jmn3DeTnl0Q8Q4orvl2Ig/index.json  /.netlify/functions/next_index  200!  Cookie=__prerender_bypass,__next_preview_data
+/_next/data/jmn3DeTnl0Q8Q4orvl2Ig/news.json  /.netlify/functions/next_news  200!  Cookie=__prerender_bypass,__next_preview_data
+/_next/data/jmn3DeTnl0Q8Q4orvl2Ig/news/how-covid-19-is-affecting-our-industry.json  /.netlify/functions/next_news_slug  200!  Cookie=__prerender_bypass,__next_preview_data
+/_next/data/jmn3DeTnl0Q8Q4orvl2Ig/news/how-our-technology-works.json  /.netlify/functions/next_news_slug  200!  Cookie=__prerender_bypass,__next_preview_data
+/_next/data/jmn3DeTnl0Q8Q4orvl2Ig/news/how-to-change-your-water-supplier.json  /.netlify/functions/next_news_slug  200!  Cookie=__prerender_bypass,__next_preview_data
+/_next/data/jmn3DeTnl0Q8Q4orvl2Ig/news/our-core-values.json  /.netlify/functions/next_news_slug  200!  Cookie=__prerender_bypass,__next_preview_data
+/_next/data/jmn3DeTnl0Q8Q4orvl2Ig/news/test-post.json  /.netlify/functions/next_news_slug  200!  Cookie=__prerender_bypass,__next_preview_data
+/_next/data/jmn3DeTnl0Q8Q4orvl2Ig/news/welcome-to-hydrology.json  /.netlify/functions/next_news_slug  200!  Cookie=__prerender_bypass,__next_preview_data
+/about  /.netlify/functions/next_about  200!  Cookie=__prerender_bypass,__next_preview_data
+/api/hello  /.netlify/functions/next_api_hello  200
+/benefits  /.netlify/functions/next_benefits  200!  Cookie=__prerender_bypass,__next_preview_data
+/contact  /.netlify/functions/next_contact  200!  Cookie=__prerender_bypass,__next_preview_data
+/news  /.netlify/functions/next_news  200!  Cookie=__prerender_bypass,__next_preview_data
+/news/how-covid-19-is-affecting-our-industry  /.netlify/functions/next_news_slug  200!  Cookie=__prerender_bypass,__next_preview_data
+/news/how-our-technology-works  /.netlify/functions/next_news_slug  200!  Cookie=__prerender_bypass,__next_preview_data
+/news/how-to-change-your-water-supplier  /.netlify/functions/next_news_slug  200!  Cookie=__prerender_bypass,__next_preview_data
+/news/our-core-values  /.netlify/functions/next_news_slug  200!  Cookie=__prerender_bypass,__next_preview_data
+/news/test-post  /.netlify/functions/next_news_slug  200!  Cookie=__prerender_bypass,__next_preview_data
+/news/welcome-to-hydrology  /.netlify/functions/next_news_slug  200!  Cookie=__prerender_bypass,__next_preview_data
