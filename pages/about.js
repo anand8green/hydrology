@@ -11,8 +11,6 @@ export default function About({ heading, subheading, body, image }) {
 
   const mode = useDarkMode(false)
 
-
-
   return (
     <div className="InsidePage">
 

@@ -30,7 +30,7 @@
 .Hero {
   text-align: center;
   min-height: 50rem;
-  color: white;
+  color: white !important;
   font-size: 2rem;
   font-family: $thin;
   background-color: #{$Blue};
@@ -55,11 +55,13 @@
 
       > h1 {
         padding: 1rem;
+        color: white !important;
       }
 
       > p {
         font-size: 1.3rem;
         padding: 1rem;
+        color: white !important;
       }
     }
     .Hero__Form {

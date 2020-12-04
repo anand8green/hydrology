@@ -1,5 +1,5 @@
 import Hero from "./Component/Home/Hero";
-import News from "./Component/Home/News";
+import NewsComp from "./Component/Home/NewsComp";
 import Features from "./Component/Home/Features";
 import VideoComp from "./Component/Home/VideoComp";
 import Contact from "./Component/Home/Contact";
@@ -36,7 +36,13 @@ export default function index({
         features_items={features_items} />
       <VideoComp video_title={video_title}
         video_subtitle={video_subtitle} />
-      <News newsItem={newsItems}
+
+      <div className="NewsTitle">
+        <h1>{news_title}</h1>
+        <p>{news_subtitle}</p>
+      </div>
+
+      <NewsComp newsItem={newsItems}
         news_title={news_title}
         news_subtitle={news_subtitle} />
       <Contact contact_title={contact_title}

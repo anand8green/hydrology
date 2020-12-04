@@ -5,7 +5,10 @@ body.dark-mode {
   .VideoComp,
   .News,
   .Footer,
-  .InsidePage .content {
+  .InsidePage .content,
+  .NewsBox,
+  .wrapper,
+  .Home {
     background-color: #{$Black};
 
     h1 {
@@ -16,12 +19,16 @@ body.dark-mode {
     }
   }
 }
+
 body.light-mode {
   .SubHero,
   .VideoComp,
   .News,
   .Footer,
-  .InsidePage .content {
+  .InsidePage .content,
+  .NewsBox,
+  .wrapper,
+  .Home {
     background-color: #{$White};
 
     h1 {
