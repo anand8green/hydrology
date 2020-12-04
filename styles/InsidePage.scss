@@ -1,0 +1,61 @@
+@import "guide";
+
+//     #{$Blue}
+//     #{$DarkBlue}
+//     #{$Black}
+//     #{$Green}
+//     $thin
+//     $mid
+//     $fat
+
+.InsidePage {
+  font-family: $thin;
+
+  .TopBar {
+    background-color: #{$Blue};
+    min-height: 35rem;
+    &__Content {
+      @include centerMe;
+
+      .Title {
+        color: white;
+        text-align: center;
+        padding: 3rem 0 6rem 0;
+        > h1 {
+          font-size: 3.9rem;
+        }
+
+        > p {
+          font-size: 1.4rem;
+          margin: 1rem 0;
+          padding: 0 2rem;
+          line-height: 2rem;
+        }
+      }
+    }
+  }
+
+  .content {
+    position: relative;
+    z-index: 10;
+    clip-path: ellipse(340% 100% at 50% 0);
+    -webkit-clip-path: ellipse(300% 100% at 50% 100%);
+    margin-top: -10rem;
+    margin-bottom: 5rem;
+
+    .pic {
+      margin-top: 3rem;
+      img {
+        width: 100%;
+        border-radius: 1rem;
+        object-fit: cover;
+        height: 25rem;
+        margin-bottom: 3rem;
+
+        @media (max-width: 800px) {
+          height: 15rem;
+        }
+      }
+    }
+  }
+}

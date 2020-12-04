@@ -14,13 +14,7 @@ export default function Hero({ title, subtitle }) {
                     <p>{subtitle}</p>
                 </div>
 
-                <div className="Hero__Form">
-                    <input type="text" placeholder="E-mail address" />
-                    <button>Get a Quote</button>
-                </div>
             </div>
-
-            {/* <BubbleBg /> */}
 
             <BubbleNew />
 

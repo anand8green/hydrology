@@ -9,7 +9,6 @@
 //     $fat
 
 .News {
-  background-color: #{$Black};
   font-family: $mid;
   padding: 10rem 0;
 
@@ -67,7 +66,7 @@
 
     &__industry {
       font-family: $thin;
-      color: #{$Blue};
+      color: #{$Blue} !important;
       font-size: 0.9rem;
     }
     &__title {
@@ -78,7 +77,7 @@
     &__date {
       font-family: $thin;
       font-size: 0.8rem;
-      color: rgb(150, 150, 150);
+      color: rgb(150, 150, 150) !important;
     }
   }
 }

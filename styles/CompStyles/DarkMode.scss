@@ -1,0 +1,35 @@
+@import "../guide";
+
+body.dark-mode {
+  .SubHero,
+  .VideoComp,
+  .News,
+  .Footer,
+  .InsidePage .content {
+    background-color: #{$Black};
+
+    h1 {
+      color: $Blue;
+    }
+    p {
+      color: #{$White};
+    }
+  }
+}
+body.light-mode {
+  .SubHero,
+  .VideoComp,
+  .News,
+  .Footer,
+  .InsidePage .content {
+    background-color: #{$White};
+
+    h1 {
+      color: $Blue;
+    }
+
+    p {
+      color: $DarkGray;
+    }
+  }
+}

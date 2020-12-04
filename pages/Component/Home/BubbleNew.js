@@ -11,7 +11,7 @@ export default function BubbleNew() {
                 style={{
                     backgroundImage: "url(/bub5.svg)",
                     backgroundRepeat: 'no-repeat',
-                    backgroundSize: 'contain'
+                    backgroundSize: 'cover'
 
                 }}
 
@@ -36,7 +36,7 @@ export default function BubbleNew() {
                 style={{
                     backgroundImage: "url(/bub6.svg)",
                     backgroundRepeat: 'no-repeat',
-                    backgroundSize: 'contain'
+                    backgroundSize: 'cover'
 
                 }}
 

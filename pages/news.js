@@ -1,48 +1,46 @@
 import Butter from 'buttercms'
+import NavBar from './Component/NavBar';
+import BubbleNew from './Component/Home/BubbleNew';
+import Footer from './Component/Home/Footer'
+import News from './Component/Home/News'
 
-import NewsItem from './Component/Home/News/NewsItem'
-
-export default function News(props) {
+export default function NewsPage({ heading, subheading, newsItems }) {
 
     return (
-        <div className="NewsBox">
-            <h1>This is the news page</h1>
-            {/* {
-                props.newsItem.map((item, index) => {
+        // <div className="dfdfd">
+        //     {/* <div className="top" style={{ background: "#30bad2" }}>
+        //         <NavBar />
+        //     </div> */}
 
-                    const newCatogory = item.categories[0]?.name === undefined ? "Industry" : item.categories[0].name
-                    const newDate = new Date(item.published);
-                    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'Augest', 'September', 'October', 'November', 'December']
-                    const month = months[newDate.getMonth()]
-                    const day = newDate.getDate()
-                    const year = newDate.getFullYear()
-                    const showNewDate = `${month} ${day}, ${year}`
+        //     <News newsItem={newsItems} />
 
-                    return (
-                        < NewsItem
-                            category={newCatogory}
-                            title={item.title}
-                            date={showNewDate}
-                            image={item.featured_image}
-                            key={index}
-                            slug />
-                    )
-                })
-            } */}
-
+        // </div>
+        <div className="InsidePage">
+            <NavBar />
+            <div className="content">
+                <News newsItem={newsItems} />
+            </div>
+            <div>
+                <Footer />
+            </div>
         </div>
+
     )
 }
 
 export const getStaticProps = async () => {
 
     const butter = Butter(process.env.BUTTER_CMS)
-    let res = await butter.post.list()
+    const res = await butter.page.retrieve("*", "news")
+    const news = await butter.post.list({ page_size: 6 })
 
     return {
         props: {
-            newsItem: res.data.data
-        }
+            heading: res.data.data.fields.heading,
+            subheading: res.data.data.fields.subheading,
+            newsItems: news.data.data,
 
+        }
     }
+
 }

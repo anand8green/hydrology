@@ -6,6 +6,7 @@ import Contact from "./Component/Home/Contact";
 import Footer from "./Component/Home/Footer";
 import Butter from 'buttercms'
 import { db } from "../config/firebase";
+import useDarkMode from "use-dark-mode";
 
 export default function index({
   title,
@@ -23,6 +24,8 @@ export default function index({
   footer_title,
   footer_subtitle
 }) {
+
+  const mode = useDarkMode(false)
 
   return (
     <div className="Home" >
@@ -47,7 +50,6 @@ export default function index({
 export const getStaticProps = async () => {
 
   const butter = Butter(process.env.BUTTER_CMS)
-
   const home = await butter.page.retrieve("*", "home")
   const news = await butter.post.list({ page_size: 6 })
 

@@ -27,8 +27,18 @@ export default function NavBar() {
                             About
                         </Link>
                     </li>
-                    <li>Benefits</li>
-                    <li>News</li>
+
+                    <li>
+                        <Link href="/benefits">
+                            Benefits
+                        </Link>
+                    </li>
+
+                    <li>
+                        <Link href="/news">
+                            News
+                        </Link>
+                    </li>
                     <li>FAQs</li>
 
                     <li>

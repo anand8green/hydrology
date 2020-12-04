@@ -3,7 +3,7 @@ import NavBar from './Component/NavBar';
 import BubbleNew from './Component/Home/BubbleNew';
 import Footer from './Component/Home/Footer'
 
-export default function About({ heading, subheading, body }) {
+export default function About({ heading, subheading, body, image }) {
     function createMarkup() {
         return { __html: body }
     }
@@ -24,9 +24,9 @@ export default function About({ heading, subheading, body }) {
 
             <div className="content">
                 <div className="text">
-                    {/* <div className="pic">
+                    <div className="pic">
                         <img src={image} alt="" />
-                    </div> */}
+                    </div>
                     <div dangerouslySetInnerHTML={createMarkup()}
                         className="info"
                     />
@@ -43,13 +43,14 @@ export default function About({ heading, subheading, body }) {
 export const getStaticProps = async () => {
 
     const butter = Butter(process.env.BUTTER_CMS)
-    const res = await butter.page.retrieve("*", "contact")
+    const res = await butter.page.retrieve("*", "benefits")
 
     return {
         props: {
             heading: res.data.data.fields.heading,
             subheading: res.data.data.fields.subheading,
             body: res.data.data.fields.body,
+            image: res.data.data.fields.image
 
         }
     }

@@ -8,6 +8,8 @@ import '../styles/CompStyles/News.scss'
 import '../styles/CompStyles/SubHero.scss'
 import '../styles/CompStyles/VideoComp.scss'
 import '../styles/CompStyles/NewsDetails.scss'
+import '../styles/InsidePage.scss'
+import '../styles/CompStyles/DarkMode.scss'
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />

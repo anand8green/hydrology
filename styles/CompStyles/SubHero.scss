@@ -4,6 +4,7 @@
 //     #{$Black}
 //     #{$Green}
 //     #{$White};
+//      $DarkGray
 
 //     $thin
 //     $mid
@@ -14,7 +15,7 @@
 .SubHero {
   position: relative;
   z-index: 10;
-  background-color: #{$Black};
+
   color: #{$White};
   // border-radius: 90%/100px 100px 0 0;
   clip-path: ellipse(150% 100% at 50% 0);
@@ -34,9 +35,10 @@
     padding: 2rem;
 
     > h1 {
-      font-size: 3rem;
+      font-size: 3.2rem;
       font-family: $mid;
       padding-top: 5rem;
+      max-width: 25rem;
     }
 
     > p {
@@ -82,7 +84,6 @@
           justify-content: center;
           .title {
             display: block;
-            color: #{$White};
           }
           .subTitle {
             color: #{$Green};
