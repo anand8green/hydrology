@@ -24,7 +24,7 @@
     }
 
     span {
-      color: #{$Blue};
+      color: #{$Blue} !important;
     }
     p {
       font-family: $thin;

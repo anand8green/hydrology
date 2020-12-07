@@ -10,12 +10,10 @@ export default function NewsPage({ heading, subheading, newsItems }) {
         return { __html: body }
     }
 
-
     const mode = useDarkMode(false)
 
     return (
         <div className="InsidePage">
-
             <div className="TopBar">
                 <div className="TopBar__Content">
                     <NavBar />

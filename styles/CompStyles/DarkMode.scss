@@ -7,11 +7,15 @@ body.dark-mode {
   .InsidePage .content,
   .NewsBox,
   .wrapper,
-  .Home {
+  .Home,
+  .NewsDetails {
     background-color: #{$Black};
 
     h1 {
       color: $Blue;
+    }
+    h2 {
+      color: $White;
     }
     p {
       color: #{$White};
@@ -26,11 +30,15 @@ body.light-mode {
   .InsidePage .content,
   .NewsBox,
   .wrapper,
-  .Home {
+  .Home,
+  .NewsDetails {
     background-color: #{$White};
 
     h1 {
       color: $Blue;
+    }
+    h2 {
+      color: $DarkGray !important;
     }
 
     p {

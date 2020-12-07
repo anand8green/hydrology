@@ -7,7 +7,7 @@ export default function VideoComp({ video_title, video_subtitle }) {
         <div className="VideoComp">
             {video_title ?
                 <div className="VideoContent">
-                    <h1> <span>{title[0]},</span>{title[1]}</h1>
+                    <h2> <span>{title[0]},</span>{title[1]}</h2>
                     <p>{video_subtitle}</p>
                     <div className="VideoBox">
                         [animatable infographic here]

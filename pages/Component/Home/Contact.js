@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { db } from '../../../config/firebase'
+import BubbleNew from './BubbleNew'
 
 export default function Contact({ contact_title, contact_subtitle }) {
 
@@ -21,12 +22,13 @@ export default function Contact({ contact_title, contact_subtitle }) {
             tel,
             note
         })
-
     }
 
     return (
         <div className="Contact">
+
             <div className="Contact__Content">
+
                 <div className="title">
                     <h1>{contact_title}</h1>
                     <p>{contact_subtitle}</p>
@@ -60,6 +62,8 @@ export default function Contact({ contact_title, contact_subtitle }) {
                     <p>We aim to get back to you within 48 hours.</p>
                 </form>
             </div>
+
+            <BubbleNew />
 
         </div>
     )

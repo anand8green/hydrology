@@ -5,7 +5,7 @@ export default function Features({ features_title, features_details, features_it
         <div className="SubHero">
 
             <div className="SubHero__Content">
-                <h1>{features_title}</h1>
+                <h2 style={{ maxWidth: 400, marginTop: 100 }} >{features_title}</h2>
                 <p>{features_details}</p>
                 <div className="SubHero__cms">
 

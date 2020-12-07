@@ -15,8 +15,7 @@
 .SubHero {
   position: relative;
   z-index: 10;
-
-  color: #{$White};
+  // color: #{$White};
   // border-radius: 90%/100px 100px 0 0;
   clip-path: ellipse(150% 100% at 50% 0);
   -webkit-clip-path: ellipse(150% 100% at 50% 100%);
@@ -43,6 +42,7 @@
       font-family: $mid;
       padding-top: 5rem;
       max-width: 25rem;
+      color: $White;
     }
 
     > p {

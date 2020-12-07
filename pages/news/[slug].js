@@ -1,6 +1,7 @@
 import Butter from 'buttercms'
 import NavBar from '../Component/NavBar';
 import Footer from '../Component/Home/Footer'
+import useDarkMode from 'use-dark-mode';
 
 export default function Post({ data }) {
 
@@ -8,42 +9,50 @@ export default function Post({ data }) {
         return { __html: data.body }
     }
 
+    const mode = useDarkMode(false)
+
     return (
 
-        <div className="NewsDetails">
-            <div className="topBar">
-                <NavBar />
-            </div>
-            <div className="picBar">
-                <div className="pic">
-                    <img src={data.featured_image} />
-                </div>
-            </div>
-            <div className="content">
-                <div className="text">
-                    <h1>{data.title}</h1>
-                    <div dangerouslySetInnerHTML={createMarkup()}
-                        className="info"
-                    />
+        <div className="InsidePage">
+
+            <div className="TopBar">
+                <div className="TopBar__Content">
+                    <NavBar />
                 </div>
 
             </div>
-            <div className="bottom">
+
+            <div className="content">
+
+                <div className="NewsDetails" style={{
+                    marginTop: -400
+                }}>
+
+                    <div className="picBar" style={{
+                        marginBottom: 100
+                    }}>
+                        <div className="pic">
+                            <img src={data.featured_image} />
+                        </div>
+                    </div>
+                    <div className="content">
+                        <div className="text">
+                            <h1>{data.title}</h1>
+                            <div dangerouslySetInnerHTML={createMarkup()}
+                                className="info"
+                            />
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div>
                 <Footer />
             </div>
-
         </div>
 
-        // <div className="Hero">
-        //     <NavBar />
-        //     <img src={data.featured_image} />
-        //     <div className="Hero__Content">
-        //         <div className="Hero__Text">
-        //             <h1>{data.title}</h1>
-        //         </div>
-        //     </div>
-        //     <div dangerouslySetInnerHTML={createMarkup()} />
-        // </div>
     )
 }
 

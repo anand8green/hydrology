@@ -2,11 +2,14 @@ import Butter from 'buttercms'
 import NavBar from './Component/NavBar';
 import BubbleNew from './Component/Home/BubbleNew';
 import Footer from './Component/Home/Footer'
+import useDarkMode from 'use-dark-mode';
 
 export default function About({ heading, subheading, body }) {
     function createMarkup() {
         return { __html: body }
     }
+
+    const mode = useDarkMode(false)
 
     return (
         <div className="InsidePage">
