@@ -1,7 +1,13 @@
 // import Image from 'next/image'
 import MenuRoundedIcon from '@material-ui/icons/MenuRounded';
+import CloseRoundedIcon from '@material-ui/icons/CloseRounded';
 import Link from 'next/link'
+import { useState } from 'react';
+import BurgerMenu from './BurgerMenu';
 export default function NavBar() {
+
+    const [open, setOpen] = useState(false)
+
     return (
         <div className="NavBar">
 
@@ -52,9 +58,21 @@ export default function NavBar() {
 
                 <button>Sign In</button>
 
-                <MenuRoundedIcon className="icon" />
+                <div className="BurgetLink" onClick={() => {
+                    setOpen(!open)
+                }}>
+                    {
+                        open ? <CloseRoundedIcon className="icon" /> :
+                            <MenuRoundedIcon className="icon" />
+                    }
+
+                </div>
 
             </div>
+
+            {
+                open ? <BurgerMenu /> : null
+            }
 
         </div>
     )

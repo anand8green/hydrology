@@ -1,0 +1,45 @@
+@import "../guide";
+//     #{$Blue}
+//     #{$DarkBlue}
+//     #{$Black}
+//     #{$Green}
+
+//     $thin
+//     $mid
+//     $fat
+
+.BurgetLink {
+  cursor: pointer;
+}
+
+.BurgerMenu {
+  //   background-color: red;
+  position: absolute;
+  font-size: 1rem !important;
+  font-family: $mid;
+  text-align: left;
+  top: 7rem;
+  z-index: 1000;
+  background-color: #6be5fab0;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  width: 95%;
+  max-width: 20rem;
+  right: 2rem;
+
+  li {
+    list-style: none;
+    padding: 1rem;
+    background-color: #fff;
+    border-bottom: thin solid rgb(180, 226, 245);
+    border-radius: 1rem;
+    color: $DarkBlue;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $DarkBlue;
+      color: white;
+    }
+  }
+}

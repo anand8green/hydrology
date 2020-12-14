@@ -10,6 +10,7 @@ import '../styles/CompStyles/VideoComp.scss'
 import '../styles/CompStyles/NewsDetails.scss'
 import '../styles/InsidePage.scss'
 import '../styles/CompStyles/DarkMode.scss'
+import '../styles/CompStyles/BurgerMenu.scss'
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />

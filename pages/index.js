@@ -7,6 +7,8 @@ import Footer from "./Component/Home/Footer";
 import Butter from 'buttercms'
 import { db } from "../config/firebase";
 import useDarkMode from "use-dark-mode";
+import BurgerMenu from "./Component/BurgerMenu";
+import { useState } from "react";
 
 export default function index({
   title,
@@ -27,8 +29,12 @@ export default function index({
 
   const mode = useDarkMode(false)
 
+
+
   return (
     <div className="Home" >
+
+
 
       <Hero title={title} subtitle={subtitle} />
       <Features features_title={features_title}
