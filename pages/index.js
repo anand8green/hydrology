@@ -48,7 +48,10 @@ export default function index({
       <Contact contact_title={contact_title}
         contact_subtitle={contact_subtitle} />
       <Footer footer_title={footer_title}
-        footer_subtitle={footer_subtitle} />
+        footer_subtitle={footer_subtitle}
+        isHome
+      />
+
     </div>
   )
 }

@@ -72,9 +72,15 @@
           }
 
           .IconBox {
-            padding: 1rem;
+            padding: 0rem;
             .icon {
               width: 120px;
+            }
+            @media (max-width: 700px) {
+              padding: 0 2rem 0 0;
+              .icon {
+                width: 100px;
+              }
             }
           }
           .InfoBox {

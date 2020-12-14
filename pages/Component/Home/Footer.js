@@ -1,9 +1,10 @@
 import Link from 'next/link'
 import React from 'react'
 
-export default function Footer({ footer_title, footer_subtitle }) {
+export default function Footer({ footer_title, footer_subtitle, isHome }) {
+
     return (
-        <div className="Footer">
+        <div className="Footer" style={{ backgroundColor: isHome ? "#252832" : null }} >
             <div className="Footer__Content">
                 <h1 className="title">{footer_title}</h1>
                 <p className="subTitle">{footer_subtitle}</p>
@@ -13,10 +14,9 @@ export default function Footer({ footer_title, footer_subtitle }) {
                 </div>
 
                 <div className="linksBox">
-
                     <div className="links">
                         <h3>Website</h3>
-                        <p> <Link href="/">
+                        <p style={{ color: "black" }} > <Link href="/">
                             Home
                         </Link></p>
                         <p><Link href="/about">
@@ -52,6 +52,6 @@ export default function Footer({ footer_title, footer_subtitle }) {
 
             </div>
 
-        </div>
+        </ div >
     )
 }

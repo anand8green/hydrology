@@ -10,7 +10,7 @@
 
 .Footer {
   color: #{$White} !important;
-  background-color: #{$Black};
+  // background-color: #{$Black};
   position: relative;
   z-index: 10;
   color: #{$White};
@@ -68,9 +68,11 @@
     }
 
     .linksBox {
-      margin: 6rem;
+      margin: 6rem auto;
       display: flex;
       justify-content: space-evenly;
+      align-items: center;
+      max-width: 30rem;
 
       .links {
         > h3 {
@@ -86,7 +88,7 @@
           color: $White !important;
 
           &:hover {
-            color: #{$Blue};
+            color: rgb(0, 217, 255) !important;
           }
         }
       }

@@ -21,6 +21,9 @@ body.dark-mode {
       color: #{$White};
     }
   }
+  .Footer {
+    background-color: #{$LightGray};
+  }
 }
 
 body.light-mode {
@@ -43,6 +46,13 @@ body.light-mode {
 
     p {
       color: $DarkGray;
+    }
+  }
+  .Footer {
+    background-color: $Black;
+
+    .links > p {
+      color: $White !important;
     }
   }
 }

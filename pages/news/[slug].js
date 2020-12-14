@@ -35,6 +35,7 @@ export default function Post({ data }) {
                             <img src={data.featured_image} />
                         </div>
                     </div>
+
                     <div className="content">
                         <div className="text">
                             <h1>{data.title}</h1>
@@ -48,7 +49,8 @@ export default function Post({ data }) {
                 </div>
 
             </div>
-            <div>
+            <div style={{ marginTop: -300 }}>
+
                 <Footer />
             </div>
         </div>
