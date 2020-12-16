@@ -19,7 +19,7 @@ export default function BubbleNew() {
 
                 initial={{
                     y: -1000,
-                    opacity: 0.1
+                    opacity: 0.05
                 }}
                 animate={{
                     y: -1800,
