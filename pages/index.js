@@ -29,12 +29,8 @@ export default function index({
 
   const mode = useDarkMode(false)
 
-
-
   return (
     <div className="Home" >
-
-
 
       <Hero title={title} subtitle={subtitle} />
       <Features features_title={features_title}

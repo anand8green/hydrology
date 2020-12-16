@@ -48,7 +48,7 @@ export default function Footer({ footer_title, footer_subtitle, isHome }) {
                     <img src="/logo_buble.svg" width='35' />
                 </div>
 
-                <p className="iconTag">Hydrology Limited 2020 - All Rights Reserved</p>
+                <p className="iconTag" >Hydrology Limited 2020 - All Rights Reserved</p>
 
             </div>
 

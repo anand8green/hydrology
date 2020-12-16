@@ -7,6 +7,34 @@ export default function BubbleNew() {
         <div>
             <div className="bubbleStatic"></div>
 
+            {/* Following Bubbles starts from screen */}
+
+            <motion.div className="BubbleNew"
+                style={{
+                    backgroundImage: "url(/bub5.svg)",
+                    backgroundRepeat: 'no-repeat',
+                    backgroundSize: 'cover'
+
+                }}
+
+                initial={{
+                    y: -1000
+                }}
+                animate={{
+                    y: -1800
+                }}
+                transition={{
+                    duration: 20,
+                    type: "tween",
+                    repeat: Infinity,
+                    ease: "linear"
+
+                }}
+            >
+            </motion.div>
+
+            {/* Following Bubbles starts from bottom */}
+
             <motion.div className="BubbleNew"
                 style={{
                     backgroundImage: "url(/bub5.svg)",

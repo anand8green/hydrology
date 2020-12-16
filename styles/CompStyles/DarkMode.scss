@@ -24,6 +24,9 @@ body.dark-mode {
   .Footer {
     background-color: #{$LightGray};
   }
+  .NewsItem {
+    background-color: #333746;
+  }
 }
 
 body.light-mode {
@@ -48,11 +51,38 @@ body.light-mode {
       color: $DarkGray;
     }
   }
+
   .Footer {
     background-color: $Black;
 
     .links > p {
       color: $White !important;
+    }
+    &__Content {
+      p {
+        color: $White;
+      }
+    }
+  }
+
+  .SubHero__cms__tab .icon {
+    background-color: rgb(222, 222, 222) !important;
+  }
+  .NewsItem {
+    background-color: #ffffff;
+    .info {
+      &__title {
+        color: $DarkGray;
+      }
+    }
+  }
+  .Contact {
+    &__Content {
+      .title {
+        p {
+          color: white;
+        }
+      }
     }
   }
 }

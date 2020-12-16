@@ -16,7 +16,7 @@ export default function NavBar() {
                     <img
                         src="/logo.svg"
                         alt="Hydrology logo"
-                        width={120}
+                        width={150}
                         height={100}
                         className="logo"
                     />

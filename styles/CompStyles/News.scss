@@ -46,12 +46,16 @@
 // News boxes
 
 .NewsBox {
-  display: flex;
-  flex-wrap: wrap;
-  padding-left: 1rem;
-  max-width: 55rem;
   margin: 0rem auto;
   margin-bottom: 8rem;
+  padding: 1rem;
+
+  @media (min-width: 800px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include centerMe;
+  }
 }
 
 // News component
@@ -64,6 +68,13 @@
   border-radius: 1rem;
   overflow: hidden;
   transition: 0.3s ease;
+
+  @media (max-width: 800px) {
+    width: 100%;
+    padding: 0;
+    margin: 2rem 0rem;
+    background-color: #333746;
+  }
 
   &:hover {
     transform: translateY(-5px);
