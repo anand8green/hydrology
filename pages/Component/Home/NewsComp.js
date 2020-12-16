@@ -6,7 +6,11 @@ export default function NewsComp(props) {
 
     return (
 
-        <div className="NewsBox">
+        <div className="NewsBox" style={{
+
+            marginBottom: 100
+        }}>
+
             {
                 props.newsItem ?
                     props.newsItem.map((item, index) => {
