@@ -18,10 +18,12 @@ export default function BubbleNew() {
                 }}
 
                 initial={{
-                    y: -1000
+                    y: -1000,
+                    opacity: 0.1
                 }}
                 animate={{
-                    y: -1800
+                    y: -1800,
+                    opacity: 1
                 }}
                 transition={{
                     duration: 20,
