@@ -24,6 +24,7 @@ button {
 }
 
 @mixin centerMe {
+  min-width: 275px;
   max-width: 1150px;
   margin: 0 auto;
 }

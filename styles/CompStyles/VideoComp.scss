@@ -13,6 +13,7 @@
   z-index: 10;
   background-color: #{$Black};
   font-family: $mid;
+  min-width: 300px;
 
   .VideoContent {
     @include centerMe;
@@ -80,6 +81,12 @@
               padding: 0 2rem 0 0;
               .icon {
                 width: 100px;
+              }
+            }
+            @media (max-width: 400px) {
+              padding: 0 1rem 0 0;
+              .icon {
+                width: 70px;
               }
             }
           }

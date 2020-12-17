@@ -13,6 +13,7 @@
   background-color: #{$Blue};
   position: relative;
   overflow: hidden;
+  min-width: 300px;
 
   &__Content {
     margin: 0 auto;

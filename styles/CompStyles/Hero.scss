@@ -35,6 +35,8 @@
   font-family: $thin;
   background-color: #{$Blue};
 
+  min-width: 300px;
+
   .BubbleBg {
     // background-color: #{$Blue};
     position: absolute;
@@ -56,6 +58,12 @@
       > h1 {
         padding: 1rem;
         color: white !important;
+        @media (max-width: 800px) {
+          font-size: 3rem;
+        }
+        @media (max-width: 400px) {
+          font-size: 2rem;
+        }
       }
 
       > p {
@@ -65,18 +73,22 @@
       }
     }
     .Hero__Form {
+      min-width: 250px;
       > input {
-        width: 300px;
         margin: 2rem 0;
         @include bigButton;
         color: rgb(132, 132, 132);
         border-top-left-radius: 0.8rem;
         border-bottom-left-radius: 0.8rem;
         transition: all 0.3s ease;
-
         &:hover,
         &:focus {
           background-color: rgb(222, 227, 230);
+        }
+        @media (max-width: 420px) {
+          width: 150px;
+          font-size: 0.7rem;
+          padding: 1rem;
         }
       }
       > button {
@@ -90,6 +102,11 @@
 
         &:hover {
           background-color: #689c41;
+        }
+        @media (max-width: 420px) {
+          width: 100px;
+          font-size: 0.7rem;
+          padding: 1rem;
         }
       }
     }
