@@ -48,7 +48,9 @@ export default function Quote() {
 
                 <div className="text">
 
-                    <form className="form" onSubmit={handleSubmit}>
+                    <form className="form" onSubmit={handleSubmit}
+
+                    >
                         <label htmlFor=""> Full Name</label>
                         <input type="text"
                             value={name}
