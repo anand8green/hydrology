@@ -1,5 +1,6 @@
 import NavBar from "../NavBar";
 import BubbleNew from "./BubbleNew";
+import Link from 'next/link'
 
 export default function Hero({ title, subtitle }) {
     return (
@@ -16,7 +17,9 @@ export default function Hero({ title, subtitle }) {
 
                 <div className="Hero__Form">
                     <input type="text" placeholder="E-mail address" />
-                    <button>Get a Quote</button>
+                    <Link href="/quote">
+                        <button>Get a Quote</button>
+                    </Link>
                 </div>
             </div>
 

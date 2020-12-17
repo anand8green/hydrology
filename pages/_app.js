@@ -11,6 +11,7 @@ import '../styles/CompStyles/NewsDetails.scss'
 import '../styles/InsidePage.scss'
 import '../styles/CompStyles/DarkMode.scss'
 import '../styles/CompStyles/BurgerMenu.scss'
+import '../styles/CompStyles/Quote.scss'
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />
