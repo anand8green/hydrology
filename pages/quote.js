@@ -5,29 +5,75 @@ import Footer from './Component/Home/Footer'
 import useDarkMode from 'use-dark-mode';
 import { db } from '../config/firebase'
 import { useState } from 'react';
+import axios from 'axios'
+import { AnimatePresence, motion, useSpring } from 'framer-motion';
 
 export default function Quote() {
 
     const mode = useDarkMode(false)
 
     const [name, setName] = useState("")
-    const [companyName, setCompanyName] = useState("")
+    const [companyname, setCompanyName] = useState("")
+    const [postcode, setPostcode] = useState("")
     const [email, setEmail] = useState("")
     const [tel, setTel] = useState("")
     const [note, setNote] = useState("")
+    const [unFilled, setUnfilled] = useState(false)
+
+    const [modal, setModal] = useState(false)
+
+    const myObj = {
+        key: "quote",
+        status: "published",
+        fields: [
+            {
+                name: name,
+                companyname: companyname,
+                postcode: postcode,
+                email: email,
+                tel: tel,
+                note: note
+            }]
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        // Stor in firebase
+        console.log(process.env.MY_TOKEN);
+        console.log(process.env.BUTTER_CMS);
 
-        db.collection('hydroContacts').add({
-            name,
-            companyName,
-            email,
-            tel,
-            note
+        axios.post('https://api.buttercms.com/v2/content', {
+            ...myObj
+        }, {
+            headers: {
+                'Authorization': `${process.env.MY_TOKEN}`
+            }
         })
+            .then(function (response) {
+                console.log(response);
+            }).catch(error => console.log(error.response))
+
+        !name ?
+
+            setUnfilled(true)
+
+            :
+
+            setModal(true)
+        setName("")
+        setCompanyName("")
+        setPostcode("")
+        setEmail("")
+        setTel("")
+        setNote("")
+
+        setTimeout(() => {
+
+            setModal(false)
+            setUnfilled(false)
+
+        }, 2000);
+
     }
 
     return (
@@ -48,8 +94,44 @@ export default function Quote() {
 
                 <div className="text">
 
-                    <form className="form" onSubmit={handleSubmit}
+                    {/* Modal Pop up */}
 
+                    <AnimatePresence>
+
+                        {
+                            modal && <motion.div className="form modal"
+                                initial={{
+                                    x: "-50%",
+                                    scale: 0
+                                }}
+                                animate={{
+                                    scale: 1,
+                                    transition: {
+                                        type: 'spring',
+                                        duration: 1,
+                                    }
+
+                                }}
+                                exit={{
+                                    scale: 0, transition: {
+
+                                        type: 'tween',
+                                        duration: 0.3,
+                                    }
+                                }}
+                            >
+                                <h3>Thank you!</h3>
+                                <p>
+                                    We have recived your details and one of our team member will contact you asap!
+
+    </p>
+                            </motion.div>
+
+                        }
+
+                    </ AnimatePresence>
+
+                    <form className="form" onSubmit={handleSubmit}
                     >
                         <label htmlFor=""> Full Name</label>
                         <input type="text"
@@ -58,8 +140,13 @@ export default function Quote() {
 
                         <label htmlFor=""> Company Name</label>
                         <input type="text"
-                            value={companyName}
+                            value={companyname}
                             onChange={(e) => setCompanyName(e.target.value)}
+                        />
+                        <label htmlFor=""> Company Postcode</label>
+                        <input type="text"
+                            value={postcode}
+                            onChange={(e) => setPostcode(e.target.value)}
                         />
                         <label htmlFor=""> Contact Email</label>
                         <input type="email" value={email}
@@ -72,8 +159,15 @@ export default function Quote() {
 
                         <input type="text" value={note}
                             onChange={(e) => setNote(e.target.value)} />
+                        {
+                            unFilled && <p style={{
+                                textAlign: 'left',
+                                color: 'red',
+
+                            }}>* Please fill in all required fields</p>
+                        }
                         <button>Get a Quote</button>
-                        <p style={{ color: 'darkgray' }}>We aim to get back to you ASAP!</p>
+
                     </form>
 
                 </div>

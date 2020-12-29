@@ -9,6 +9,9 @@ import { db } from "../config/firebase";
 import useDarkMode from "use-dark-mode";
 import BurgerMenu from "./Component/BurgerMenu";
 import { useState } from "react";
+import next from "next";
+
+console.log(process.env.BUTTER_CMS);
 
 export default function index({
   title,
