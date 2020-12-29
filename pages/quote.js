@@ -72,7 +72,7 @@ export default function Quote() {
             setModal(false)
             setUnfilled(false)
 
-        }, 2000);
+        }, 4000);
 
     }
 
