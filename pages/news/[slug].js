@@ -20,7 +20,7 @@ export default function Post({ data }) {
                 <div className="TopBar__Content">
                     <NavBar />
                     <div className="Title">
-                        <h1 style={{ fontSize: 50 }}>{data.title}</h1>
+                        <h1>{data.title}</h1>
                         <p>Industry News</p>
                     </div>
                 </div>
