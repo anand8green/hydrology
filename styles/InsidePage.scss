@@ -42,6 +42,9 @@
     -webkit-clip-path: ellipse(300% 100% at 50% 100%);
     margin-top: -10rem;
     padding-bottom: 12rem;
+    @media (max-width: 400px) {
+      margin-top: -6rem;
+    }
 
     .pic {
       margin-top: 3rem;
@@ -57,36 +60,5 @@
         }
       }
     }
-  }
-}
-
-// For contact page
-
-.box {
-  @include centerMe;
-  display: flex;
-  margin: 0rem auto;
-
-  padding: 5rem 2rem 0rem 2rem;
-
-  .contactInfo {
-    flex: 1;
-
-    h1 {
-      font-size: 1.5rem;
-      font-family: $mid;
-    }
-
-    p {
-      font-size: 1.2rem;
-      margin: 1rem 0;
-      line-height: 2rem;
-      margin-bottom: 3rem;
-    }
-  }
-  .map {
-    flex: 2;
-    // background-color: #fff;
-    border: 4px solid white;
   }
 }
