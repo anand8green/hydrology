@@ -42,16 +42,25 @@ button {
   font-family: "Gotham-thin";
   src: url("./font/GR-Light.otf") format("embedded-opentype");
   src: url("./font//GothamRoundedLight_21020.ttf") format("truetype");
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
   font-family: "Gotham-mid";
   src: url("./font/GR-Book.otf") format("embedded-opentype");
   src: url("./font/GothamRoundedBook_21018.ttf") format("truetype");
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
   font-family: "Gotham-fat";
   src: url("./font/GR-Medium.otf") format("embedded-opentype");
   src: url("./font/GothamRoundedMedium_21022.ttf") format("truetype");
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
 }
 
 ::placeholder {
@@ -76,6 +85,7 @@ ul {
 
 input {
   border: none;
+  font-size: 16px !important;
 }
 
 h2 {

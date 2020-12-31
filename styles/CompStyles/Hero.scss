@@ -35,6 +35,8 @@
   font-family: $thin;
   background-color: #{$Blue};
   min-width: 300px;
+  font-weight: normal;
+  font-style: normal;
 
   .BubbleBg {
     // background-color: #{$Blue};
@@ -60,7 +62,7 @@
         @media (max-width: 800px) {
           font-size: 3rem;
         }
-        @media (max-width: 400px) {
+        @media (max-width: 500px) {
           font-size: 2rem;
         }
       }
@@ -84,10 +86,13 @@
         &:focus {
           background-color: rgb(222, 227, 230);
         }
-        @media (max-width: 420px) {
-          width: 150px;
-          font-size: 0.7rem;
-          padding: 1rem;
+        @media (max-width: 500px) {
+          width: 80%;
+          border-radius: 0.8rem;
+
+          // width: 150px;
+          // font-size: 0.7rem;
+          // padding: 1rem;
         }
       }
       > button {
@@ -98,14 +103,18 @@
         background: #{$Green};
         cursor: pointer;
         transition: all 0.3s ease;
+        // font-size: 16px !important;
 
         &:hover {
           background-color: #689c41;
         }
-        @media (max-width: 420px) {
-          width: 100px;
-          font-size: 0.7rem;
-          padding: 1rem;
+        @media (max-width: 500px) {
+          border-radius: 0.8rem;
+          width: 80%;
+          margin-top: -2rem;
+          // width: 100px;
+          // font-size: 0.7rem;
+          // padding: 1rem;
         }
       }
     }

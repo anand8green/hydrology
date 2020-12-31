@@ -19,7 +19,6 @@ export default function Quote() {
     const [tel, setTel] = useState("")
     const [note, setNote] = useState("")
     const [unFilled, setUnfilled] = useState(false)
-
     const [modal, setModal] = useState(false)
 
     const myObj = {
@@ -38,10 +37,7 @@ export default function Quote() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-
-        console.log(process.env.MY_TOKEN);
-        console.log(process.env.BUTTER_CMS);
-
+        console.log(modal);
         axios.post('https://api.buttercms.com/v2/content', {
             ...myObj
         }, {
@@ -50,15 +46,11 @@ export default function Quote() {
             }
         })
             .then(function (response) {
-                console.log(response);
+
             }).catch(error => console.log(error.response))
 
-        !name ?
-
-            setUnfilled(true)
-
+        !name ? setUnfilled(true)
             :
-
             setModal(true)
         setName("")
         setCompanyName("")
@@ -66,13 +58,6 @@ export default function Quote() {
         setEmail("")
         setTel("")
         setNote("")
-
-        setTimeout(() => {
-
-            setModal(false)
-            setUnfilled(false)
-
-        }, 4000);
 
     }
 
@@ -96,79 +81,93 @@ export default function Quote() {
 
                     {/* Modal Pop up */}
 
-                    <AnimatePresence>
+                    {
+                        modal && <motion.div className="form modal"
+                            initial={{
+                                x: "-50%",
+                                scale: 0
+                            }}
+                            animate={{
+                                scale: 1.5,
+                                transition: {
+                                    type: 'spring',
+                                    duration: 1,
+                                    delay: 0.3
+                                }
 
-                        {
-                            modal && <motion.div className="form modal"
-                                initial={{
-                                    x: "-50%",
-                                    scale: 0
-                                }}
-                                animate={{
-                                    scale: 1,
-                                    transition: {
-                                        type: 'spring',
-                                        duration: 1,
-                                    }
+                            }}
+                        // exit={{
+                        //     scale: 0, transition: {
 
-                                }}
-                                exit={{
-                                    scale: 0, transition: {
+                        //         type: 'tween',
+                        //         duration: 0.3,
+                        //     }
+                        // }}
+                        >
+                            <h3>Thank you!</h3>
+                            <p>
+                                We have recived your details and one of our team member will contact you asap!
 
-                                        type: 'tween',
-                                        duration: 0.3,
-                                    }
-                                }}
-                            >
-                                <h3>Thank you!</h3>
-                                <p>
-                                    We have recived your details and one of our team member will contact you asap!
+                             </p>
+                        </motion.div>
 
-    </p>
-                            </motion.div>
+                    }
 
-                        }
+                    <motion.div
+                        // initial={{
+                        //     scale: 1.5
+                        // }}
+                        animate={{
+                            scale: modal ? 0 : 1,
+                            opacity: modal ? 0 : 1,
+                            transition: {
+                                type: 'spring',
+                                duration: 1,
 
-                    </ AnimatePresence>
+                            }
 
-                    <form className="form" onSubmit={handleSubmit}
+                        }}
+
                     >
-                        <label htmlFor=""> Full Name</label>
-                        <input type="text"
-                            value={name}
-                            onChange={(e) => setName(e.target.value)} />
+                        <form className="form" onSubmit={handleSubmit}
+                        >
+                            <label htmlFor=""> Full Name</label>
+                            <input type="text"
+                                value={name}
+                                onChange={(e) => setName(e.target.value)} />
 
-                        <label htmlFor=""> Company Name</label>
-                        <input type="text"
-                            value={companyname}
-                            onChange={(e) => setCompanyName(e.target.value)}
-                        />
-                        <label htmlFor=""> Company Postcode</label>
-                        <input type="text"
-                            value={postcode}
-                            onChange={(e) => setPostcode(e.target.value)}
-                        />
-                        <label htmlFor=""> Contact Email</label>
-                        <input type="email" value={email}
-                            onChange={(e) => setEmail(e.target.value)} />
+                            <label htmlFor=""> Company Name</label>
+                            <input type="text"
+                                value={companyname}
+                                onChange={(e) => setCompanyName(e.target.value)}
+                            />
+                            <label htmlFor=""> Company Postcode</label>
+                            <input type="text"
+                                value={postcode}
+                                onChange={(e) => setPostcode(e.target.value)}
+                            />
+                            <label htmlFor=""> Contact Email</label>
+                            <input type="email" value={email}
+                                onChange={(e) => setEmail(e.target.value)} />
 
-                        <label htmlFor=""> Contact Telephone</label>
-                        <input type="tel" value={tel} pattern="[0-9]*"
-                            onChange={(e) => setTel(e.target.value)} />
-                        <label htmlFor=""> Notes</label>
+                            <label htmlFor=""> Contact Telephone</label>
+                            <input type="tel" value={tel} pattern="[0-9]*"
+                                onChange={(e) => setTel(e.target.value)} />
+                            <label htmlFor=""> Notes</label>
 
-                        <input type="text" value={note}
-                            onChange={(e) => setNote(e.target.value)} />
-                        {
-                            unFilled && <p style={{
-                                textAlign: 'left',
-                                color: 'red',
+                            <input type="text" value={note}
+                                onChange={(e) => setNote(e.target.value)} />
+                            {
+                                unFilled && <p style={{
+                                    textAlign: 'left',
+                                    color: 'red',
 
-                            }}>* Please fill in all required fields</p>
-                        }
-                        <button>Get a Quote</button>
+                                }}>* Please fill in all required fields</p>
+                            }
+                            <button>Get a Quote</button>
 
-                    </form>
+                        </form>
+                    </motion.div>
 
                 </div>
             </div>

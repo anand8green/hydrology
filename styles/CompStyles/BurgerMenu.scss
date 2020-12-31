@@ -26,6 +26,8 @@
   width: 95%;
   max-width: 20rem;
   right: 2rem;
+  // display: grid;
+  // gap: 1rem;
 
   li {
     list-style: none;
@@ -36,6 +38,10 @@
     color: $DarkBlue;
     transition: all 0.3s ease;
     cursor: pointer;
+
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
 
     &:hover {
       background-color: $DarkBlue;

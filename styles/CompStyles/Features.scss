@@ -17,6 +17,7 @@
   z-index: 10;
   margin-top: -12rem !important;
   min-width: 300px;
+  // background-color: $Black !important;
 
   @media (max-width: 400px) {
     margin-top: -15rem !important;
@@ -40,8 +41,12 @@
     @include centerMe;
     padding: 2rem;
 
+    @media (max-width: 367px) {
+      margin-top: 6rem;
+    }
+
     @media screen and (min-width: 900px) {
-      padding: 2rem 8rem;
+      padding: 2rem;
     }
 
     > h1 {
@@ -57,7 +62,7 @@
       font-size: 1.2rem;
       margin: 3rem 0;
       line-height: 2rem;
-      max-width: 40rem;
+      max-width: 60rem;
     }
 
     .SubHero__cms {
@@ -66,16 +71,19 @@
       font-family: $thin;
       padding-bottom: 10rem;
 
+      justify-content: space-between;
+
       .SubHero__cms__tab {
-        width: 12rem;
+        width: 18rem;
         display: flex;
-        margin: 0rem 4rem 3rem 0;
+        margin-bottom: 2rem;
+        font-size: 1.3rem;
 
         // justify-content: space-between;
         .icon {
           background-color: #343747;
-          width: 4rem;
-          height: 4rem;
+          width: 6rem;
+          height: 6rem;
           border-radius: 0.7rem;
           display: flex;
           justify-content: center;
@@ -85,7 +93,7 @@
           color: #{$Green};
 
           > img {
-            width: 1.5rem;
+            width: 2.3rem;
             object-fit: cover;
           }
         }

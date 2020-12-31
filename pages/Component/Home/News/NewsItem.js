@@ -1,22 +1,26 @@
 
+import { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive'
 
 export default function NewsItem({ category, title, date, image, index, slug }) {
 
-    const isMobile = useMediaQuery({ query: `(max-width: 800px)` })
+    const isMobile = useMediaQuery({ query: `(min-width: 800px)` })
 
     console.log(isMobile);
 
     return (
         <a href={`news/${slug}`} key={index} >
+
             <div className="NewsItem"
                 key={index}
                 style={{
-                    padding: 0,
-                    width: index === 0 && !isMobile ? 550 : null,
-                    // width: index === 0 && isMobile ? '100%' : null,
+                    // padding: 0,
+                    // background: index === 0 && isMobile ? "red" : "green",
+                    // fontSize: index === 0 && isMobile ? 60 : 10,
+                    // width: index === 0 && isMobile ? null : "550px",
+                    // width: index === 0 && 550,
+                    // width: index === 0 && isMobile ? '100%' : 550
                     // backgroundColor: isMobile ? "red" : "green",
-
                 }}
             >
                 <img className="pic" src={image}>

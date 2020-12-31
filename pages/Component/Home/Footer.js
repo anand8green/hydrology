@@ -6,11 +6,17 @@ export default function Footer({ footer_title, footer_subtitle, isHome }) {
     return (
         <div className="Footer" style={{ backgroundColor: isHome ? "#252832" : null }} >
             <div className="Footer__Content">
-                <h1 className="title">{footer_title}</h1>
-                <p className="subTitle">{footer_subtitle}</p>
+                <h1 className="title">The fresh approach</h1>
+                <p className="subTitle">Simple billing, competitive prices and excellent customer service.</p>
                 <div className="buttons">
-                    <button className="QuoteBtn">Get a Quote</button>
-                    <button className="callBtn">Call Us</button>
+
+                    <Link href="/quote">
+                        <button className="QuoteBtn">Get a Quote</button>
+                    </Link>
+                    <Link href="tel:0345 222 3232">
+                        <button className="callBtn">Call Us</button>
+                    </Link>
+
                 </div>
 
                 <div className="linksBox">

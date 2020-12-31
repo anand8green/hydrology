@@ -2,6 +2,7 @@ import Butter from 'buttercms'
 import NavBar from '../Component/NavBar';
 import Footer from '../Component/Home/Footer'
 import useDarkMode from 'use-dark-mode';
+import BubbleNew from '../Component/Home/BubbleNew';
 
 export default function Post({ data }) {
 
@@ -18,11 +19,33 @@ export default function Post({ data }) {
             <div className="TopBar">
                 <div className="TopBar__Content">
                     <NavBar />
+                    <div className="Title">
+                        <h1 style={{ fontSize: 50 }}>{data.title}</h1>
+                        <p>Industry News</p>
+                    </div>
                 </div>
-
+                <BubbleNew />
             </div>
 
-            <div className="content">
+            {/* <div className="TopBar">
+                <div className="TopBar__Content">
+                    <NavBar />
+                </div>
+
+            </div> */}
+
+            <div className="content" >
+                <div className="text">
+                    <div className="pic">
+                        <img src={data.featured_image} alt="" />
+                    </div>
+                    <div dangerouslySetInnerHTML={createMarkup()}
+                        className="info"
+                    />
+                </div>
+            </div>
+
+            {/* <div className="content">
 
                 <div className="NewsDetails" style={{
                     marginTop: -400
@@ -43,13 +66,12 @@ export default function Post({ data }) {
                                 className="info"
                             />
                         </div>
-
                     </div>
 
                 </div>
+            </div> */}
 
-            </div>
-            <div style={{ marginTop: -300 }}>
+            <div>
 
                 <Footer />
             </div>
