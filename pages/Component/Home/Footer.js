@@ -34,7 +34,7 @@ export default function Footer({ footer_title, footer_subtitle, isHome }) {
                     </div>
                     <div className="links">
                         <h3>Switching</h3>
-                        <p>FAQs</p>
+                        <p> <Link href="/faqs">FAQs</Link></p>
                         <p> <Link href="/contact">
                             Contact
                         </Link></p>
