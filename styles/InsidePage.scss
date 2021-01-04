@@ -67,4 +67,90 @@
       }
     }
   }
+
+  // For privacy and terms page and any other long text page
+
+  .contentLong {
+    position: relative;
+    z-index: 10;
+    background-color: red;
+    clip-path: ellipse(640% 100% at 50% 0);
+    -webkit-clip-path: ellipse(600% 100% at 50% 100%);
+    margin-top: -10rem;
+    padding-bottom: 12rem;
+    @media (max-width: 400px) {
+      margin-top: -12rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin: 3rem 0;
+      font-family: $mid;
+    }
+  }
+}
+
+//
+
+// This is for FAQs page
+
+//
+
+.qbox {
+  margin: 1.5rem auto;
+  max-width: 40rem;
+  // background-color: white;
+  border-radius: 3rem;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.156);
+}
+
+.question {
+  background-color: $Blue;
+  padding: 1.6rem;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-weight: 600;
+  @media (max-width: 600px) {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  & span {
+    margin-left: auto;
+    .plusIcon {
+      font-size: 40px;
+      @media (max-width: 600px) {
+        font-size: 30px;
+      }
+    }
+  }
+}
+.answer {
+  background-color: #fff;
+  line-height: 1.9rem;
+  padding: 1.6rem;
+  border-bottom-left-radius: 1.7rem;
+  border-bottom-right-radius: 1.7rem;
+  @media (max-width: 600px) {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    padding: 1rem;
+  }
+}
+
+//  FOR PRIVACT PAGE AND TERM PAGE
+
+.contentLong {
+  position: relative;
+  z-index: 10;
+  clip-path: ellipse(340% 100% at 50% 0);
+  -webkit-clip-path: ellipse(300% 100% at 50% 100%);
+  margin-top: -10rem;
+  padding-bottom: 12rem;
+  @media (max-width: 400px) {
+    margin-top: -12rem;
+  }
+  background-color: $Black;
 }

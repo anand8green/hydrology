@@ -45,7 +45,12 @@ export default function NavBar() {
                             News
                         </Link>
                     </li>
-                    <li>FAQs</li>
+                    <li>
+                        <Link href="/faqs">
+                            FAQs
+                        </Link>
+
+                    </li>
 
                     <li>
                         <Link href="/contact">

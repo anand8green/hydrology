@@ -19,7 +19,7 @@ export default function Hero({ title, subtitle }) {
             <NavBar />
             <div className="Hero__Content">
                 <div className="Hero__Text">
-                    <h1>{title}</h1>
+                    <h1>The Fresh Approach <br /> to Business Water</h1>
                     <p>{subtitle}</p>
                 </div>
                 <form action="" onSubmit={handleSubmit}>

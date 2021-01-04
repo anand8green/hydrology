@@ -45,8 +45,12 @@ export default function Footer({ footer_title, footer_subtitle, isHome }) {
                     </div>
                     <div className="links">
                         <h3>Other</h3>
-                        <p>Terms</p>
-                        <p>Privacy</p>
+                        <p>
+                            <Link href="/terms">Terms</Link> </p>
+
+                        <p><Link href="/privacy">
+                            Privacy</Link>
+                        </p>
                         <p>Sign In</p>
                     </div>
 
