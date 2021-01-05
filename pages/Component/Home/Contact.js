@@ -15,13 +15,13 @@ export default function Contact({ contact_title, contact_subtitle }) {
 
         // Stor in firebase
 
-        db.collection('hydroContacts').add({
-            name,
-            companyName,
-            email,
-            tel,
-            note
-        })
+        // db.collection('hydroContacts').add({
+        //     name,
+        //     companyName,
+        //     email,
+        //     tel,
+        //     note
+        // })
     }
 
     return (
