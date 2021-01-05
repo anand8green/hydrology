@@ -62,7 +62,7 @@
         @media (max-width: 800px) {
           font-size: 3rem;
         }
-        @media (max-width: 500px) {
+        @media (max-width: 550px) {
           font-size: 2rem;
         }
       }
@@ -74,21 +74,24 @@
       }
     }
     .Hero__Form {
-      min-width: 250px;
       > input {
+        width: 370px;
         margin: 2rem 0;
+        font-size: 1.2rem !important;
         @include bigButton;
         color: rgb(132, 132, 132);
         border-top-left-radius: 0.8rem;
         border-bottom-left-radius: 0.8rem;
         transition: all 0.3s ease;
+        padding: 1.2rem 1rem;
         &:hover,
         &:focus {
           background-color: rgb(222, 227, 230);
         }
-        @media (max-width: 500px) {
+        @media (max-width: 550px) {
           width: 80%;
           border-radius: 0.8rem;
+          font-size: 1rem !important;
 
           // width: 150px;
           // font-size: 0.7rem;
@@ -101,14 +104,16 @@
         border-top-right-radius: 0.8rem;
         border-bottom-right-radius: 0.8rem;
         background: #{$Green};
+        font-size: 1.2rem !important;
         cursor: pointer;
         transition: all 0.3s ease;
-        // font-size: 16px !important;
+        // font-size: 18px !important;
+        // padding: 2rem;
 
         &:hover {
           background-color: #689c41;
         }
-        @media (max-width: 500px) {
+        @media (max-width: 550px) {
           border-radius: 0.8rem;
           width: 80%;
           margin-top: -2rem;
